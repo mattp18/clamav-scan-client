@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+application {
+    mainClass = 'Driver' // Replace with your actual main class
+}
+
+group = 'com.github.mattp18'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+    testImplementation 'org.mockito:mockito-core:5.7.0'
+}
+
+tasks.withType(JavaCompile) {
+    sourceCompatibility = '21'
+    targetCompatibility = '21'
+}
